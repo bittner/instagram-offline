@@ -6,10 +6,10 @@ SPDX-License-Identifier: GPL-3.0-or-later
 
 # instagram-offline [![Python package][version]][pypi] [![REUSE status][reuse]][reuse-info] [![Vibe coded][badge]][contributing]
 
-Downloads all posts, photos as well as videos and reels, of one or more Instagram accounts and builds a self-contained static
-site in `site/`, one folder per account. Watch the creators you chose distraction-free, without ads,
-autoplay or an algorithmic feed. Keep a usable archive of your own work, which Meta's data export
-does not easily provide.
+Downloads all posts, photos as well as videos and reels, of one or more Instagram accounts and
+builds a self-contained static site in `site/`, one folder per account. Watch the creators you
+chose distraction-free, without ads, autoplay or an algorithmic feed. Keep a usable archive of
+your own work, which Meta's data export does not easily provide.
 
 ## How it works
 
@@ -37,13 +37,17 @@ a Chromium-based browser in the conventional `$BROWSER` variable is preferred ov
 Without any, Playwright's own Chromium is downloaded on first use.
 **Firefox and Safari are not supported**, as they lack the DevTools protocol the tool relies on.
 
-Every account page has topic filters and an "About" box on the overview: by default the topics are the hashtags the account uses most, and the About text is the account's own bio, captured with its name, category, follower count and links. An optional `site/USERNAME/profile.json` with an `about` text and a list of topics (name plus caption keywords) replaces either. Keywords match at the start of a word; a trailing space makes a keyword match whole words only.
+Every account page has topic filters and an "About" box on the overview: by default the topics
+are the hashtags the account uses most, and the About text is the account's own bio, captured
+with its name, category, follower count and links. An optional `site/USERNAME/profile.json` with
+an `about` text and a list of topics (name plus caption keywords) replaces either. Keywords
+match at the start of a word; a trailing space makes a keyword match whole words only.
 
 ### Versioning the content
 
 `site/` is ignored by this repository. To track changes of the archive, keep it as a separate,
-private Git repository that ignores the video files and versions only the metadata, index and HTML
-pages:
+private Git repository that ignores the video files and versions only the metadata, index and
+HTML pages:
 
 ```sh
 cd site
