@@ -46,13 +46,13 @@ match at the start of a word; a trailing space makes a keyword match whole words
 ### Versioning the content
 
 `site/` is ignored by this repository. To track changes of the archive, keep it as a separate,
-private Git repository that ignores the video files and versions only the metadata, index and
-HTML pages:
+private Git repository that ignores the media files and the run markers, and versions only the
+metadata, index and HTML pages:
 
 ```sh
 cd site
 git init
-printf '*.mp4\n*.part\n' > .gitignore
+printf '*.jpg\n*.mp4\n*.part\n.complete\n' > .gitignore
 git add .
 git commit -m "Add archive"
 ```
